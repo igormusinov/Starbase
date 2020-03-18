@@ -1,0 +1,9 @@
+FROM pytorch/pytorch:latest
+
+RUN conda install scikit-learn -y
+RUN pip install seaborn
+RUN pip install plotly==4.5.4
+RUN pip install jupyterlab
+RUN pip install pandas
+
+#ENTRYPOINT ["jupyterlab", "--allow-root", "--ip=0.0.0.0"]
